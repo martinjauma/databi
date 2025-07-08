@@ -171,3 +171,8 @@ cython_debug/
 # Mac
 .DS_Store
 
+.streamlit/secrets.toml
+# Streamlit config
+.streamlit/config.toml
+
+
