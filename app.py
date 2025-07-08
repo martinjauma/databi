@@ -3,10 +3,11 @@ import pandas as pd
 from pymongo import MongoClient
 
 # --- conexión MongoDB ---
-uri = "mongodb+srv://martinjauma:SRADATAFULL@sra.zzkpnxj.mongodb.net/SRA"
-client = MongoClient(uri)
+# Accedé al secreto
+mongo_url = st.secrets["MONGO_URL"]
 
-# --- elegimos base y colección ---
+# Conectá a MongoDB
+client = MongoClient(mongo_url)
 db = client["SRA"]
 collection = db["DATA"]
 
